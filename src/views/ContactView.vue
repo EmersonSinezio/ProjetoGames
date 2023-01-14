@@ -19,7 +19,7 @@
       </svg>
     </a>
     <a
-      href="https://linkedin.com/in/emerson-mesquita-317a81258"
+      href="https://linkedin.com/in/emerson-sineziio"
       class="socials"
     >
       <svg viewBox="0 0 128 128" class="icon">
@@ -41,7 +41,7 @@
         ></path>
       </svg>
     </a>
-    <a href="https://github.com/EmersonSinezio" class="socials" id="port">
+    <a href="https://emerson-portfolio.vercel.app/" class="socials" id="port">
       Portifólio
     </a>
   </div>
