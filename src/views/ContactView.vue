@@ -1,6 +1,6 @@
 <template>
   <div class="contact">
-    <a href="https://github.com/EmersonSinezio" class="socials">
+    <a href="https://github.com/EmersonSinezio/ProjetoGames" class="socials">
       <svg viewBox="0 0 128 128" class="icon">
         <g fill="#333">
           <path
