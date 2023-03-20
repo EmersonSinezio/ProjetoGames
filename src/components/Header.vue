@@ -30,7 +30,7 @@ export default {
 
 header {
   height: 10vh;
-  background-color: #990000;
+  border: 1px solid #990000;
   border-radius: 10px;
   width: 80vw;
   margin: 0 10vw;

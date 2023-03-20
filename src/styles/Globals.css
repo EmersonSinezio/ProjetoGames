@@ -7,9 +7,9 @@
 }
 
 body {
+  overflow-x: hidden;
   background-color: #000;
   color: #fff;
-  overflow-x: hidden;
 }
 
 .content {
@@ -57,4 +57,4 @@ body {
     left: 0;
     margin: 12vh 1vw;
   }
-} /*# sourceMappingURL=Globals.css.map */
+}
