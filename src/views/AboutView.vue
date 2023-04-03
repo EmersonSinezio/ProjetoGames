@@ -45,6 +45,12 @@
   right: 0;
   margin: 35vh 0.5rem;
 }
+.description_1, .description_3{
+  animation: 2s left;
+}
+.description_2{
+  animation: 2s right
+}
 .description_3 {
   bottom: 0;
   left: 0;
@@ -97,6 +103,22 @@ p {
     margin: 0 5vw;
     position: absolute;
     right: 0;
+  }
+}
+@keyframes left{
+  0%{
+    transform: translateX(-100px);
+  }
+  100%{
+    transform:translateX(0)
+  }
+}
+@keyframes right{
+  0%{
+    transform: translateX(100px);
+  }
+  100%{
+    transform:translateX(0)
   }
 }
 </style>

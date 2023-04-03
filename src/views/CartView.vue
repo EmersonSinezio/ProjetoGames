@@ -66,10 +66,11 @@ h1 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  animation: 1s animate;
 }
 .products {
   border: 1px solid #ff1919;
-  width: 90vw;
+  width: 80vw;
   height: 70vh;
   border-radius: 1rem;
   font-size: 1.1rem;
@@ -83,7 +84,7 @@ h1 {
   border-radius: 1rem;
   margin: 2vh 1vw;
   cursor: pointer;
-  background-color: #cc0000;
+  background-color: #003300;
   border: none;
   color: #ccc;
 }
@@ -93,10 +94,9 @@ h1 {
 .buttons button:hover {
   transform: scale(1.1);
   transition: 0.5s;
-  background-color: #b20000;
 }
 #cancel {
-  background-color: #ff0000;
+  background-color: #b20000;
 }
 #border {
   border-left: 0.5px solid gray;
@@ -149,6 +149,14 @@ h2 {
   }
   h2 {
     margin-top: 5vh;
+  }
+}
+@keyframes animate{
+  0%{
+    opacity:0;
+  }
+  100%{
+    opacity:1;
   }
 }
 </style>

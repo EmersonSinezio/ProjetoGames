@@ -1,6 +1,6 @@
 <template>
   <div className="home_container">
-    <div v-if="mensage" class="mensage">
+    <div v-if="message" class="message">
       <h1>Limite máximo alcançado!</h1>
     </div>
     <!-- Imagem maior -->
@@ -17,7 +17,7 @@
           id="gow"
           @click="imgFull"
         />
-        <span>R$ 199.90</span>
+        <span id="gow-price">R$ 199.90</span>
       </div>
       <div class="images_container">
         <img
@@ -27,7 +27,7 @@
           id="gta"
           @click="imgFull"
         />
-        <span>R$ 88.89</span>
+        <span id="gta-price">R$ 88.89</span>
       </div>
       <div class="images_container">
         <img
@@ -37,10 +37,29 @@
           id="ptr"
           @click="imgFull"
         />
-        <span>R$ 169.90</span>
+        <span id="ptr-price">R$ 169.90</span>
       </div>
     </div>
-  </div>
+      <div :class="{Cart:this.$store.state.cart.length >=1}">
+        <h1 v-if="this.$store.state.cart.length >=1">Teste</h1>
+        <div v-for="(product, index) in this.$store.state.cart"
+        :key="index" class="products">
+        <span id="productName">
+          {{ product.name }}
+        </span>
+           |
+           <span id="productPrice">
+             R$ {{ product.price }}
+           </span>
+           <button @click="remove" id="remove">Remove</button> 
+          </div>
+          <div class="buttons" v-if="this.$store.state.cart.length >=1">
+            <router-link to="/cart" class="link">
+            <button id="buy">Buy</button>
+          </router-link>
+          </div>
+      </div>
+    </div>
 </template>
 
 <script>
@@ -52,7 +71,7 @@ export default {
     return {
       imgSrc: gow,
       change: false,
-      mensage: false,
+      message: false,
     };
   },
   methods: {
@@ -60,9 +79,9 @@ export default {
     imgFull(e) {
       const element = e.target.id;
       if (this.$store.state.cart.length >= 5) {
-        this.mensage = true;
+        this.message = true;
         setTimeout(() => {
-          this.mensage = false;
+          this.message = false;
         }, 2000);
       } else {
         switch (element) {
@@ -88,16 +107,20 @@ export default {
         this.change == true ? (this.change = false) : (this.change = true);
       }
     },
+    remove() {
+    this.$store.commit("removeProduct", this.product);
+  },
   },
 };
 </script>
 <style>
 .card_master,
-.images_container {
+.images_container, .buttons {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  animation: 3s animate;
 }
 .imagesPreview {
   display: flex;
@@ -139,7 +162,7 @@ export default {
   border-radius: 1rem;
   cursor: pointer;
 }
-.mensage {
+.message {
   background-color: rgba(255, 49, 49, 0.9);
   padding: 1rem;
   border-radius: 0.5rem;
@@ -147,8 +170,83 @@ export default {
   width: 70vw;
   text-align: center;
   position: fixed;
+  animation: .5s showAnimation;
+}
+.Cart{
+  color: whitesmoke;
+  position: absolute;
+  right: 8px;
+  height: 80vh;
+  border: 1px solid rgba(255, 49, 49, 0.9);
+  top: 15vh;
+  width: 20vw;
+  border-radius: 1rem;
+  animation: showAnimation .5s ;
+}
+.Cart h1{
+  text-align: center;
+  margin-top: 5vh;
+}
+#buy{
+  background-color: #003300;
+}
+#remove{
+  background-color: #b20000;
+  padding: .3rem;
+  border-radius: .1.5rem;
+}
+#productName, #productPrice{
+  margin: .5rem;
+}
+#productPrice{
+  background-color: #e50000;
+  padding: .2rem .5rem;
+  border-radius: .2rem;
+}
+.products{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+button{
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  border: 1px solid gray;
+  color: white;
+  margin: .5rem;
+  cursor: pointer;
+}
+.buttons{
+  flex-direction: row;
+  margin-top: 5vh;
+}
+#gta-price, #ptr-price, #gow-price{
+  visibility: hidden;
+}
+#gta:hover ~ #gta-price {
+  visibility: visible;
+  animation: .5s showAnimation;
+}
+#gow:hover ~ #gow-price {
+  visibility: visible;
+  animation: .5s showAnimation;
+}
+#ptr:hover ~ #ptr-price {
+  visibility: visible;
+  animation: .5s showAnimation;
+}
+@media (max-width:1000px) {
+  .Cart{
+    width: 50vw;
+    margin-right: 2rem;
+    background-color: rgba(178, 0, 0, .5);
+  }
 }
 @media (max-width: 600px) {
+  .Cart{
+    display: none;
+  }  
   .card_master .image {
     width: 85vw;
     height: 70%;
@@ -190,9 +288,26 @@ export default {
   .content {
     height: 175vh;
   }
-  .mensage {
+  .message {
     margin: 15vh 15vw;
     font-size: 0.8rem;
+  }
+ 
+}
+@keyframes showAnimation{
+  0%{
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+@keyframes animate{
+  0%{
+    opacity:0;
+  }
+  100%{
+    opacity:1;
   }
 }
 </style>
