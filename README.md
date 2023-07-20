@@ -1,47 +1,37 @@
-
 ## Projeto Games
-Esse é um projeto desenvolvido baseado em games
+
+Esse é um projeto desenvolvido com base em games
 
 ## Links
-  - Site hospedado na Vercel: https://games-store-r3pu43zq7-emersonsinezio.vercel.app/#/
-  - Repositório: https://github.com/EmersonSinezio/ProjetoGames
-    - Em caso de bugs por favor entre em contato. Email: emerson.sineziio@gmail.com
 
-## Tecs 
+- Site hospedado na Vercel: https://games-store-r3pu43zq7-emersonsinezio.vercel.app/#/
+  - Em caso de bugs por favor entre em contato. Email: emerson.sineziio@gmail.com
 
-As tecs utilizadas para realizar o projeto:
+## Tecnologias Utilizadas
 
-* Vue
-* Vuex
-* Vue-Router
-* Sass
+- Vue
+- Vue-Router
+- Sass
 
-## Serviços usados:
+## Serviços Utilizados
 
-* Github
-* Vercel
+- Github
+- Vercel
 
-## Inicialização
+## Instruções de Inicialização
 
-### 1 - Quando abrir o app será recebido com a Home page
+### 1 - Ao abrir o app, você será direcionado para a página inicial (Home page).
 
-![Homepage image](https://github.com/EmersonSinezio/ProjetoGames/blob/main/public/readme/Home.png)
+![Homepage image](https://github.com/EmersonSinezio/ProjetoGames/blob/main/public/readme/games_homepage.png)
 
-### 2 - Após clicar nos games que sejam de sua preferência o item será adicionado ao carrinho
-  #### Lembrando que só pode escolher até 5 items, ao escolher entre comprar ou cancelar o carrinho vai se esvaziar
+### 2 - Ao clicar no botão "Explore" (Home page) ou "Explore" na parte superior, você será redirecionado para saber mais sobre os jogos escolhidos.
 
-![Store Page](https://github.com/EmersonSinezio/ProjetoGames/blob/main/public/readme/Store.png)
+![Explore Page](https://github.com/EmersonSinezio/ProjetoGames/blob/main/public/readme/games_explore.png)
 
-### 3 - O app conta com uma tela sobre
+### 3 - O app também possui uma página "Sobre" onde você encontrará informações de contato.
 
-![About Page](https://github.com/EmersonSinezio/ProjetoGames/blob/main/public/readme/About.png)
+![About Page](https://github.com/EmersonSinezio/ProjetoGames/blob/main/public/readme/games_about.png)
 
-## Ideia do projeto
+## Autor
 
-A principal ideia do projeto é:
- - Escolher um jogo de sua preferência
- - Comprar o item escolhido
-
-  ## Autor
-
-  * **Emerson Mesquita Sinézio**
+- **Emerson Mesquita Sinézio**
