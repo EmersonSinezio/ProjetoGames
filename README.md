@@ -4,7 +4,7 @@ Esse é um projeto desenvolvido com base em games
 
 ## Links
 
-- Site hospedado na Vercel: https://games-store-r3pu43zq7-emersonsinezio.vercel.app/#/
+- Site hospedado na Vercel: https://games-store-eta.vercel.app/#/
   - Em caso de bugs por favor entre em contato. Email: emerson.sineziio@gmail.com
 
 ## Tecnologias Utilizadas
