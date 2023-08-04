@@ -1,0 +1,91 @@
+// -----------------------------About-----------------------------
+.about_container {
+  width: 100vw;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sub_container {
+  width: 70vw;
+  height: 70vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.about_image {
+  background-image: url(../assets/kratos-god-of-war-5k-ks-1360x768.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 60%;
+  height: 100%;
+}
+.about_description {
+  width: 40%;
+  height: 100%;
+  flex-direction: column;
+  text-align: center;
+  & h1 {
+    font-family: "Bebas neue";
+    color: $colorRed;
+    font-size: 4rem;
+  }
+  & p {
+    font-family: "Abel";
+    font-size: 1.2rem;
+  }
+}
+.about_footer {
+  width: 100vw;
+  height: 15vh;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: $darkGray;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.icon {
+  margin: 0 1rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: $colorRed;
+  border: 1px solid $Gray;
+  padding: 5px;
+  &:hover {
+    border-color: $carmineRed;
+    transition: 0.5s;
+    background-color: transparent;
+    cursor: pointer;
+  }
+}
+@media (max-width: 600px) {
+  .about_description {
+    width: 50vw;
+    & p {
+      width: 100%;
+      font-size: 1rem;
+    }
+    & h1 {
+      font-size: 2.5rem;
+    }
+  }
+  .sub_container {
+    width: 100%;
+  }
+  .about_image {
+    width: 50vw;
+  }
+  .about_footer {
+    & button {
+      padding: 0.2rem 0.5rem;
+      font-size: 1rem;
+    }
+    & .icon {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}

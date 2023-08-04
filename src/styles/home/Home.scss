@@ -1,0 +1,67 @@
+// Home
+.home_container {
+  display: flex;
+  justify-content: space-around;
+}
+.home_image img {
+  width: 400px;
+  height: 667px;
+}
+.home_image,
+.home_description {
+  width: 50vw;
+  height: 100vh;
+}
+
+.home_description {
+  flex-direction: column;
+}
+.home_description div {
+  width: 30vw;
+  text-align: center;
+}
+.home_description h1 {
+  margin-bottom: 0.5rem;
+  font-size: 3.5rem;
+  color: $colorRed;
+  font-family: "Bebas neue";
+}
+.button {
+  padding: 0.5rem 1.5rem;
+  background-color: $carmineRed;
+  color: white;
+  border: 1px solid $Gray;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  &:hover {
+    background-color: transparent;
+    border-color: $colorCoral;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+}
+@media (max-width: 600px) {
+  .home_image {
+    width: 40vw;
+    height: auto;
+    & img {
+      height: 50vh;
+      width: auto;
+    }
+  }
+  .home_description div {
+    width: 35vw;
+  }
+  .home_description p {
+    height: 33vh;
+    overflow: hidden;
+    font-size: 0.9rem;
+  }
+  .home_description h1 {
+    font-size: 3rem;
+  }
+  .button {
+    padding: 0.2rem 1rem;
+    font-size: 1rem;
+  }
+}

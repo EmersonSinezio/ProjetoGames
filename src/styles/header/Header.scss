@@ -1,0 +1,34 @@
+// Header
+.header {
+  width: 35vw;
+  height: 10vh;
+  border-bottom: 1px solid $Gray;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.header h3 {
+  border-bottom: 1px solid transparent;
+  color: $colorWhite;
+  margin: 0.5rem 1.5rem;
+  font-family: "Bebas neue";
+  font-size: 2rem;
+}
+.link {
+  color: $colorWhite;
+  margin: 0 0.5rem;
+  list-style: none;
+  border-bottom: 1px solid transparent;
+  font-family: "Abel";
+}
+.link:hover,
+.header h3:hover {
+  border-color: $Gray;
+  transition: 0.5s;
+  cursor: pointer;
+  color: $colorRed;
+}
+@media (max-width: 600px) {
+  .header {
+    width: 80vw;
+  }
+}
